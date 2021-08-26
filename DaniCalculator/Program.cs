@@ -13,7 +13,7 @@ namespace DaniCalculator
         static void Main(string[] args)
         {
             Customer Cust01 = new Customer();
-            Cust01.userName = "Parklanz";
+            Cust01.userName = "wtf";
             Cust01.pin = 4200;
 
 
