@@ -12,3 +12,17 @@ C:\Users\parke\OneDrive\Documents\Coding Projects\Class 3\DaniCalculator\DaniCal
 C:\Users\parke\OneDrive\Documents\Coding Projects\Class 3\DaniCalculator\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.dll
 C:\Users\parke\OneDrive\Documents\Coding Projects\Class 3\DaniCalculator\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.pdb
 C:\Users\parke\OneDrive\Documents\Coding Projects\Class 3\DaniCalculator\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.genruntimeconfig.cache
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.csproj.AssemblyReference.cache
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.AssemblyInfoInputs.cache
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.AssemblyInfo.cs
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.csproj.CoreCompileInputs.cache
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.dll
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.pdb
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.exe
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.deps.json
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.runtimeconfig.json
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.runtimeconfig.dev.json
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.dll
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\bin\Debug\netcoreapp3.1\DaniCalculator.pdb
+C:\Users\parke\OneDrive\Documents\Coding Projects\gits\DaniCalculator\DaniCalculator\obj\Debug\netcoreapp3.1\DaniCalculator.genruntimeconfig.cache
