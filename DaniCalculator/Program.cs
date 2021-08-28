@@ -23,6 +23,42 @@ namespace DaniCalculator
                 throw new Exception("something happened, idk");
             }
         }
+        // READ DATABASE
+        public static string[] databaseRead(string searchTerm, string filepath, int positionofTerm)
+        {
+            positionofTerm--;
+            string[] recordNotFound = { "User Name/Passowrd Not Recognized" };
+            try
+            {
+                string[] lines = System.IO.File.ReadAllLines(@filepath);
+                {
+                    for(int i = 0; i < lines.Length; i++)
+                    {
+                        string[] fields = lines[i].Split(",");
+                        if(validateCredentials(searchTerm,fields,positionofTerm))
+                            {
+                            Console.WriteLine("Hello!");
+                            return fields;
+                            }
+                    }
+                    return recordNotFound;
+                }
+            }catch(Exception ex)
+            {
+                throw new Exception("something happened, idk");
+            }
+
+        }
+        // VALIDATE DATABASE INQUIRY ----------------------------------
+        
+        public static bool validateCredentials( string credential, string[] record, int positionOfTerm)
+        {
+            if(record[positionOfTerm].Equals(credential))
+            {
+                return true;
+            }
+            return false;
+        }
         // VALIDATE INPUT ------------------------------
         public static string validateInput()
         {
@@ -109,9 +145,12 @@ namespace DaniCalculator
             string userInput;
             int num;
 
-            Customer Cust01 = new Customer();
-            Cust01.userName = "Parklawnz";
-            Cust01.pin = 4200;
+            Console.WriteLine(string.Join(" ",databaseRead("PaulaDean", "Users.csv",1)));
+            Console.ReadLine();
+
+            
+
+
 
             string[] menueOptions = new string[7]
                 {"1","2","3","4","5","6","7"};
