@@ -1,16 +1,29 @@
 ﻿using System;
+using System.IO;
 
 namespace DaniCalculator
 {
-    public enum ProductCodes
-    {
-        Jam = 1,
-        Milk = 2,
-        Apple = 3
-    }
+  
 
     class Program
     {
+        // DATABASE ------------------------------------
+
+        public static void databaseWrite(string userName, string userPin, string filepath)
+        {
+            try
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filepath, true))
+                {
+                    file.Write(userName + "," + userPin + ",");
+                }
+
+            }catch(Exception ex)
+            {
+                throw new Exception("something happened, idk");
+            }
+        }
+        // VALIDATE INPUT ------------------------------
         public static string validateInput()
         {
             while(true)
@@ -38,7 +51,7 @@ namespace DaniCalculator
 
             }
         }
-
+        // CALCULATOR -------------------------------------------
         public static int Calculator()
         {
             int ctrl = 0;
@@ -88,6 +101,8 @@ namespace DaniCalculator
             } while (ctrl < 2);
             return ctrl;
         }
+
+        //M A I N --------------------------------------------
 
         static void Main(string[] args)
         {

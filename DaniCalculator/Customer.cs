@@ -4,11 +4,10 @@ using System.Text;
 
 namespace DaniCalculator
 {
-    class Customer
+    class Users
     {
-        public string userName;
-        public int pin;
-        public decimal ballance;
+        public string userName { get; set; }
+        public string userPin { get; set; }
 
     }
 }
