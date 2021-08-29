@@ -9,13 +9,14 @@ namespace DaniCalculator
     {
         // DATABASE ------------------------------------
 
-        public static void databaseWrite(string userName, string userPin, string filepath)
+        public static void DatabaseWrite(string userName, string userPin, string filepath)
         {
             try
             {
                 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filepath, true))
                 {
-                    file.Write(userName + "," + userPin + ",");
+                    file.Write(userName);
+                    file.WriteLine(userPin);
                 }
 
             }catch(Exception ex)
@@ -24,10 +25,9 @@ namespace DaniCalculator
             }
         }
         // READ DATABASE
-        public static string[] databaseRead(string searchTerm, string filepath, int positionofTerm)
+        public static bool DatabaseRead(string searchTerm, string filepath, int positionofTerm)
         {
             positionofTerm--;
-            string[] recordNotFound = { "User Name/Passowrd Not Recognized" };
             try
             {
                 string[] lines = System.IO.File.ReadAllLines(@filepath);
@@ -35,13 +35,13 @@ namespace DaniCalculator
                     for(int i = 0; i < lines.Length; i++)
                     {
                         string[] fields = lines[i].Split(",");
-                        if(validateCredentials(searchTerm,fields,positionofTerm))
+                        if(ValidateCredentials(searchTerm,fields,positionofTerm))
                             {
-                            Console.WriteLine("Hello!");
-                            return fields;
+                            return true;
                             }
                     }
-                    return recordNotFound;
+                    return false;
+
                 }
             }catch(Exception ex)
             {
@@ -51,7 +51,7 @@ namespace DaniCalculator
         }
         // VALIDATE DATABASE INQUIRY ----------------------------------
         
-        public static bool validateCredentials( string credential, string[] record, int positionOfTerm)
+        public static bool ValidateCredentials( string credential, string[] record, int positionOfTerm)
         {
             if(record[positionOfTerm].Equals(credential))
             {
@@ -145,10 +145,44 @@ namespace DaniCalculator
             string userInput;
             int num;
 
-            Console.WriteLine(string.Join(" ",databaseRead("PaulaDean", "Users.csv",1)));
-            Console.ReadLine();
+            do
+            {
+                num = 0;
+                Console.WriteLine("Log in - 0 \nSign up - 1");
+                userInput = Console.ReadLine();
+                if(userInput == "0")
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Console.Write("\nEnter Your User Name: ");
+                        string x = Console.ReadLine();
+                        Console.Write("\nEnter Your Password: ");
+                        string y = Console.ReadLine();
+                        if (DatabaseRead(y, "Users.csv", 1) == true)
+                        {
+                            Console.WriteLine("\nHello!" + x + " welcome back!");
+                            i = 3;
+                        }
+                        Console.WriteLine("User Name/Password not Recognized");
+                    }
 
-            
+                }else if(userInput == "1")
+                {
+                    Console.Write("\nEnter Your User Name: ");
+                    string x = Console.ReadLine();
+                    Console.Write("\nEnter Your Password: ");
+                    string y = Console.ReadLine();
+                    DatabaseWrite(x, y, "Users.csv");
+                    Console.WriteLine("Account Created!");
+                    Console.WriteLine("\nHello!" + x + "\n\nWelcome to my program!");
+                    break;
+                }else
+                {
+                    Console.WriteLine("Enter a valid number!");
+                }
+
+            } while (num < 2);
+
 
 
 
